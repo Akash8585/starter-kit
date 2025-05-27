@@ -6,13 +6,24 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Icon } from '@/components/icons'
 import Link from 'next/link'
+import { signIn } from '@/lib/actions'
+import { useActionState, useEffect } from 'react'
+import { toast } from 'sonner'
 
 
 export default function LoginForm() {
+    const initialState = { errorMessage: ""};
+    const [state, formAction, pending] = useActionState(signIn, initialState)
+
+    useEffect(() => {
+        if (state.errorMessage.length) {
+            toast.error(state.errorMessage)
+        }
+    }, [state.errorMessage])
     return (
         <section className="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
             <form
-                action=""
+                action={formAction}
                 className="bg-muted m-auto h-fit w-full max-w-sm overflow-hidden rounded-[calc(var(--radius)+.125rem)] border shadow-md shadow-zinc-950/5 dark:[--color-muted:var(--color-zinc-900)]">
                 <div className="bg-card -m-px rounded-[calc(var(--radius)+.125rem)] border p-8 pb-6">
                     <div className="text-center">
@@ -31,7 +42,7 @@ export default function LoginForm() {
                             <Label
                                 htmlFor="email"
                                 className="block text-sm">
-                                Username
+                                Email
                             </Label>
                             <Input
                                 type="email"
@@ -53,9 +64,9 @@ export default function LoginForm() {
                                     variant="link"
                                     size="sm">
                                     <Link
-                                        href="#"
+                                        href="/login/forgot-account"
                                         className="link intent-info variant-ghost text-sm">
-                                        Forgot your Password ?
+                                        Forgot your Account ?
                                     </Link>
                                 </Button>
                             </div>
@@ -68,7 +79,7 @@ export default function LoginForm() {
                             />
                         </div>
 
-                        <Button className="w-full">Sign In</Button>
+                        <Button className="w-full" disabled={pending} aria-disabled={pending}>Sign In</Button>
                     </div>
 
                     <div className="my-6 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
