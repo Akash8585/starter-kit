@@ -9,7 +9,7 @@ A full-stack boilerplate powered by Agno, Drizzle ORM, PostgreSQL & NeonDB, with
 
 ## 🚀 Features
 
-- **Agno** – AI-powered backend agent framework  
+- **Better Auth** – Simplified, secure Next.js authentication with email/password, magic-links, and OAuth providers.
 - **Drizzle ORM** – Type-safe database toolkit  
 - **PostgreSQL & NeonDB** – Reliable SQL storage (local & cloud)  
 - **Social Auth** – Sign in with **Google** & **GitHub**  
