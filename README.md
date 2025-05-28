@@ -1,7 +1,7 @@
 # Starter Kit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
-A full-stack boilerplate powered by Agno, Drizzle ORM, PostgreSQL & NeonDB, with social auth (Google & GitHub), Shadcn UI components, all running on Bun.
+A full-stack boilerplate powered by Better Auth, Drizzle ORM, PostgreSQL & NeonDB, with social auth (Google & GitHub), Shadcn UI components, all running on Bun.
 
 👉 **Repo:** https://github.com/Akash8585/starter-kit
 
@@ -23,10 +23,9 @@ A full-stack boilerplate powered by Agno, Drizzle ORM, PostgreSQL & NeonDB, with
 | Layer             | Technology       |
 | ----------------- | ---------------- |
 | Runtime & Tooling | Bun              |
-| Backend Framework | Agno             |
 | ORM               | Drizzle          |
 | Database          | PostgreSQL, Neon |
-| Auth              | NextAuth.js      |
+| Auth              | BetterAuth     |
 | UI Components     | Shadcn UI (Tailwind CSS) |
 | Language          | TypeScript       |
 
