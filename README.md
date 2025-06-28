@@ -52,6 +52,9 @@ Provide environment variables in .env file
 ### 3. Run Migrations
 
 ```bash
+bun add drizzle-orm @neondatabase/serverless dotenv
+bun add -D drizzle-kit tsx
+
 # Generate migrations (if you change schema)
 npx drizzle-kit generate
 
