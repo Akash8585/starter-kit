@@ -56,13 +56,13 @@ bun add drizzle-orm @neondatabase/serverless dotenv
 bun add -D drizzle-kit tsx
 
 # Generate migrations (if you change schema)
-npx drizzle-kit generate
+bunx drizzle-kit generate
 
 # Apply migrations
-npx drizzle-kit migrate
+bunx drizzle-kit migrate
 
 #Use `drizzle-kit push` to instantly apply schema changes—perfect for rapid local testing without migration files.
-npx drizzle-kit push
+bunx drizzle-kit push
 
 ```
 
