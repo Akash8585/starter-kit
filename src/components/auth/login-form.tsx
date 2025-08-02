@@ -22,10 +22,10 @@ export default function LoginForm() {
         }
     }, [state.errorMessage])
     return (
-        <section className="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
+        <section className="flex min-h-screen bg-background px-4 py-16 md:py-32 dark:bg-background">
             <form
                 action={formAction}
-                className="bg-muted m-auto h-fit w-full max-w-sm overflow-hidden rounded-[calc(var(--radius)+.125rem)] border shadow-md shadow-zinc-950/5 dark:[--color-muted:var(--color-zinc-900)]">
+                className="bg-card m-auto h-fit w-full max-w-sm overflow-hidden rounded-[calc(var(--radius)+.125rem)] border shadow-md shadow-zinc-950/5">
                 <div className="bg-card -m-px rounded-[calc(var(--radius)+.125rem)] border p-8 pb-6">
                     <div className="text-center">
                         <Link
